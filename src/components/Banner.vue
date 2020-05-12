@@ -109,14 +109,14 @@ export default {
     }
     .carousel-btn {
       color: #fff;
-      background: $secondary-color;
-      padding: 1rem 2rem;
+      background: $primary-color;
+      padding: 1rem 4rem;
       text-align: center;
       font-size: 1rem;
       font-weight: bold;
       text-decoration: none;
       border-radius: 3px;
-      border: 1px solid $secondary-color;
+      border: 1px solid $primary-color;
       text-transform: uppercase;
     }
   }
@@ -140,7 +140,7 @@ export default {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(4,9,30,.75) !important;
+    background: rgba(4,9,30,.85) !important;
   }
     .carousel-caption{
       position: absolute;
