@@ -27,7 +27,7 @@
 					</div>
 					<div class="item carousel-item">
 						<div class="img-box"><img src="../assets/images/avatar.png" alt=""></div>
-						<p class="testimonial">Growth Investment has done it again. Instant alert with peace of mind. Invest today and earn. Growth all the way!</p>
+						<p class="testimonial">Growth Investment has done it again. Instant alert with peace of mind. Invest today and earn. Growth Investment all the way!</p>
 						<p class="overview"><b> Chukwuebuka Joshua Okparanze</b>, Regular Investor</p>
 					</div>
                     <div class="item carousel-item">
@@ -37,7 +37,7 @@
 					</div>
                     <div class="item carousel-item">
 						<div class="img-box"><img src="../assets/images/avatar.png" alt=""></div>
-						<p class="testimonial">It's absolutely lovely that I have been matched and paid today after my recommitment yesterday. Weldone Wazobia Investment.</p>
+						<p class="testimonial">It's absolutely lovely that I have been matched and paid today after my recommitment yesterday. Weldone Growth Investment.</p>
 						<p class="overview"><b> Okoye John</b>, Regular Investor</p>
 					</div>
                      <div class="item carousel-item">

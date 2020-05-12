@@ -18,7 +18,7 @@
                         <div class="icon__wrapper">
                                 <p><i class="fa fa-envelope"></i></p>
                         </div>
-                        <p class="pl-3">hello@uratraining.com</p>
+                        <p class="pl-3">growthinvestment@gmail.com</p>
                     </div>
                   </div>
                    <div class="col-md-4">
@@ -26,7 +26,7 @@
                         <div class="icon__wrapper">
                             <p><i class="fa fa-phone"></i></p>
                         </div>
-                        <p class="pl-3">+2349022131450</p>
+                        <p class="pl-3">+08094986967</p>
                     </div>
                   </div>
                    <div class="col-md-4">
@@ -34,7 +34,7 @@
                      <div class="icon__wrapper">
                             <p><i class="fa fa-home"></i></p>
                      </div>
-                        <p class="pl-3">10 College Junction, Makurdi, Benue State, Nigeria</p>
+                        <p class="pl-3">No 22 Obiopko L.G.A GRA Phase 5 Off Josh Avenue Close to Hankies Hills Eatery Nasarawa State.</p>
                     </div>
                   </div>
               </div>

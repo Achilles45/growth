@@ -5,16 +5,16 @@
           <div class="row">
               <div class="col-md-4">
                   <h5>Company</h5>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius recusandae, impedit error numquam minima placeat dicta laboriosam consequuntur repellat. Nam!</p>
+                  <p class="intro">This commission was created to help and  support it's registered members financially and also to help increase economic growth in the  society as well. Our intenttions are genuie and pure.</p>
               </div>
                <div class="col-md-4">
                   <h5>Our Location & Contact</h5>
                 <h6>Head Office</h6>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, quasi?</p>
+                <p>No 22 Obiopko L.G.A GRA Phase 5 Off Josh Avenue Close to Hankies Hills Eatery Nasarawa State.</p>
                  <h6>Email Address</h6>
-                <p>support@growthinvestment.com</p>
+                <p>growthinvestment@gmail.com</p>
                  <h6>Phone</h6>
-                <p>08083946355</p>
+                <p><a href="tel:08094986967">08094986967</a></p>
               </div>
               <div class="col-md-4">
                   <h5>Payment Method</h5>
@@ -28,8 +28,8 @@
       <div class="footer__bottom">
           <div class="container">
               <div class="row">
-                  <div class="col-12 text-center">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto odit dolorum, cupiditate minus voluptate enim nulla impedit. Quisquam, minima dolorem.</p>
+                  <div class="col-12">
+                      <p>Growth Investment Company &copy; All Right Reserved, 2020</p>
                   </div>
               </div>
           </div>
@@ -66,6 +66,9 @@ footer{
         opacity: .7;
         line-height: 1.8;
     }
+    // .intro{
+    //     text-transform: capitalize;
+    // }
     .footer__bottom{
         background: #090909;
         color: #fff;
@@ -75,6 +78,9 @@ footer{
         opacity: .7;
         line-height: 1.8;
     }
+    }
+    a{
+        color: #fff;
     }
 }
 </style>

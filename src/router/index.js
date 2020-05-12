@@ -42,7 +42,7 @@ Vue.use(VueRouter)
   },
   {
     path: '/dashboard/overview',
-    name: 'Dashboard',
+    name: 'dashboard',
     component: Dashboard
   },
   {
