@@ -8,7 +8,7 @@ import Dashboard from '../views/Dashboard.vue'
 import Profile from '../views/Profile.vue'
 import Payment from '../views/Payment.vue'
 import Withdrawal from '../views/Withdrawal.vue'
-
+import firebase from 'firebase'
 Vue.use(VueRouter)
 
   const routes = [
@@ -43,22 +43,34 @@ Vue.use(VueRouter)
   {
     path: '/dashboard/overview',
     name: 'dashboard',
-    component: Dashboard
+    component: Dashboard,
+    meta:{
+      requiresAuth: true
+    }
   },
   {
     path: '/dashboard/profile',
     name: 'Profile',
-    component: Profile
+    component: Profile,
+    meta:{
+      requiresAuth: true
+    }
   },
   {
     path: '/dashboard/payment',
     name: 'Payment',
-    component: Payment
+    component: Payment,
+    meta:{
+      requiresAuth: true
+    }
   },
   {
     path: '/dashboard/withdrawal',
     name: 'Withdrawal',
-    component: Withdrawal
+    component: Withdrawal,
+    meta:{
+      requiresAuth: true
+    }
   },
 ]
 
@@ -66,5 +78,24 @@ const router = new VueRouter({
   routes,
   mode: 'history'
 })
+
+router.beforeEach((to, from, next) =>{
+  //Check if the route we are about to enter has a guard
+  if(to.matched.some(rec => rec.meta.requiresAuth)){
+    //Check auth state
+    let user = firebase.auth().currentUser
+    if(user){
+      //Grant the user access as he is signed in, proceed to user
+      next()
+    }else{
+      //Redirect to login
+      next({name: 'Signin'})
+    }
+  }else{
+    //If the routes does not requires auth, then just proceed as normal
+    next()
+  }
+})
+
 
 export default router

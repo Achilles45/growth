@@ -10,7 +10,7 @@
           </div>
           <div class="row">
               <div class="col-md-6 pt-4">
-                  <img src="../assets/images/banner3.jpeg" class="img-fluid process__img" alt="">
+                  <img src="../assets/images/hero1.jpeg" class="img-fluid process__img" alt="">
               </div>
               <!-- <div class="col-md-1"></div> -->
               <div class="col-md-5 pt-4">
@@ -76,7 +76,7 @@ export default {
             h4{
                 font-weight: bold;
                 padding-bottom: .5rem;
-                color:$primary-color;
+                color:#2b2b2b;
             }
             p{
                 color: #627081;

@@ -61,7 +61,7 @@ export default {
     }
     p{
         opacity: .9;
-        font-size: .9rem;
+        font-size: .95rem;
         color:#2b2b2b;
     }
     .gallery__wrapper{

@@ -5,7 +5,7 @@
           <div class="row">
               <div class="col-md-4">
                   <h5>Company</h5>
-                  <p class="intro">This commission was created to help and  support it's registered members financially and also to help increase economic growth in the  society as well. Our intenttions are genuie and pure.</p>
+                  <p class="intro">This commission was created to help and  support it's registered members financially and also to help increase economic growth in the  society as well. Our intentions are genuie and pure.</p>
               </div>
                <div class="col-md-4">
                   <h5>Our Location & Contact</h5>
