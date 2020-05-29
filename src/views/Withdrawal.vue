@@ -35,7 +35,7 @@
              <small>You can now make request to make withdrawal into your local bank when your investment has reached maturity</small>
              <hr>
               <div v-if="verifyuser == 'false'" class="red">
-                  You can't make withdrawals because your account or payment has not been verified. Please contact admin or call <a href="tel:09054205697">09054205697</a>
+                  You can't make withdrawals because your account or payment has not been verified. Please contact admin or call <a href="tel:09045091863">09045091863</a>
               </div>
                <div class="row">
                    <div class="col-md-8">

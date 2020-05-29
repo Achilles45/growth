@@ -26,7 +26,7 @@
                         <div class="icon__wrapper">
                             <p><i class="fa fa-phone"></i></p>
                         </div>
-                        <p class="pl-3">+08094986967</p>
+                        <p class="pl-3">+09045091863</p>
                     </div>
                   </div>
                    <div class="col-md-4">
