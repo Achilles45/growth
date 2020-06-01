@@ -18,7 +18,7 @@
             <h1 class="animated slideInDown animate3d">YOUR INVESTMENT IS SAFE & SECURED</h1>
             <p
               class="animated slideInRight animate3d"
-            >We operate using the highest security standards to make sure your returns are guaranteed.</p>
+            >Initial investment is compulsory. 100% of what ever you donated in the system</p>
             <router-link to="/signup" class="carousel-btn animated zoomIn animate3d">START NOW</router-link>
           </div>
         </div>
