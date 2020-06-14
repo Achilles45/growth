@@ -13,8 +13,8 @@
                <li><router-link to="/dashboard/overview"><i class="fa fa-cubes icons"></i>&nbsp;&nbsp; Overview</router-link></li><hr> 
                 <li><router-link to="/dashboard/profile"><i class="fa fa-users icons"></i>&nbsp;&nbsp; Profile</router-link></li><hr>
                  <li><router-link to="/dashboard/payment"><i class="fa fa-credit-card icons"></i>&nbsp;&nbsp; Deposit</router-link></li><hr> 
-                 <li><router-link to="/dashboard/upload"><i class="fa fa-credit-card icons"></i>&nbsp;&nbsp; Upload Proof</router-link></li><hr> 
-                 <li><router-link to="/dashboard/withdrawal"><i class="fa fa-clone icons"></i>&nbsp;&nbsp; Make Withdrawal</router-link></li><hr> 
+                 <li><router-link to="/dashboard/withdrawal"><i class="fa fa-clone icons"></i>&nbsp;&nbsp; Make Withdrawal</router-link></li><hr>
+                 <li><router-link to="/dashboard/upload"><i class="fa fa-clone icons"></i>&nbsp;&nbsp; Upload Payment</router-link></li><hr>  
                <li @click="logOut()" class="logout"><i class="fa fa-database icons"></i>&nbsp;&nbsp; Logout</li><hr>
             </ul>
             <br><br><br><br>
@@ -52,39 +52,22 @@
               <div v-if="verifyuser == 'false'" class="red">
                   Your account has not been verified. Please make your payment for verification or call <a href="tel:07065996814">07065996814</a>
               </div>
-                  <div class="summary__wrapper">
-                  <div class="summary__card one pt-4">
-                     <i class="fa fa-home"></i>
-                     <div class="content pl-4">
-                         <h6>Invetment Plan</h6>
-                         <h5>&#8358; {{account_type}} package</h5>
-                     </div>
-                  </div>
-                    <div class="summary__card two pt-4">
-                     <i class="fa fa-credit-card"></i>
-                     <div class="content pl-4">
-                         <h6>Total Profit(50% plus your capital)</h6>
-                         <h5>&#8358; {{ available_balance }}</h5>
-                     </div>
-                  </div>
-                    <!-- <div class="summary__card three pt-4">
-                     <i class="fa fa-cubes"></i>
-                     <div class="content pl-4">
-                         <h6>Invetment Lifecycle</h6>
-                         <p>Your capital and returns would be paid back after a minimum of 4 days after your payment has been confirmed.</p>
-                     </div>
-                  </div> -->
-                   <div class="summary__card four pt-4">
-                     <i class="fa fa-comments"></i>
-                     <div class="content pl-4">
-                         <h6>Need any support?</h6>
-                         <p>Please send a message using the livechat widget on the website. Our customer support team will reach out to you in less 24 hours.</p>
-                     </div>
-                  </div>
-              </div>
+                        <div >
+                        <p>Upload Your Proof of Payment:</p>
+                        <input type="file" @change="previewImage" accept="image/*" >
+                        </div>
+                        <div>
+                        <p>Progress: {{uploadValue.toFixed()+"%"}}
+                        <progress id="progress" :value="uploadValue" max="100" ></progress>  </p>
+                        </div>
+                        <div v-if="imageData!=null">
+                            <img class="preview" :src="picture">
+                            <br>
+                        <button @click="onUpload" class="upload__btn">Upload Proof</button>
+                        </div>
               </div>
               <hr>
-              <p class="note">Kindly note that your investment lifecycle will only begin to count when you have been verified to have made payment for your selected plan. Your returns of 50% of your investment and your capital would be paid back in 3 working days. Also, should you find any difficulties in using the platform, kindly use livechat widget to send a message and our customer success team will respond as soon as possible. Happy investing.</p>
+              <p class="note">Kindly note that your investment lifecycle will only begin to count when you have been verified to have made payment for your selected plan. Your returns of 50% of your investment and your capital would be paid back in a week. Also, should you find any difficulties in using the platform, kindly use livechat widget to send a message and our customer success team will respond as soon as possible. Happy investing.</p>
               </div>
             <!--End of Dashboard
             =========================-->
@@ -104,7 +87,10 @@ export default {
             account_type:null,
             id:null,
             available_balance:null,
-            verifyuser:null
+            verifyuser:null,
+            imageData:null,
+            picture:null,
+            uploadValue: 0
         }
     },
     computed:{
@@ -113,7 +99,26 @@ export default {
         }
     },
      methods:{
-          show:function(){
+        previewImage(event) {
+      this.uploadValue=0;
+      this.picture=null;
+      this.imageData = event.target.files[0];
+    },
+
+    onUpload(){
+      this.picture=null;
+      const storageRef=firebase.storage().ref(`${this.imageData.name}`).put(this.imageData);
+      storageRef.on(`state_changed`,snapshot=>{
+        this.uploadValue = (snapshot.bytesTransferred/snapshot.totalBytes)*100;
+      }, error=>{console.log(error.message)},
+      ()=>{this.uploadValue=100;
+        storageRef.snapshot.ref.getDownloadURL().then((url)=>{
+        //   this.picture =url;
+        });
+      }
+      );
+    },
+    show:function(){
             const navLeft = document.querySelector('#dashboard__left')
             navLeft.classList.toggle('navLeft')
         },
@@ -154,6 +159,14 @@ export default {
 </script>
 <style lang="scss" scoped>
 @import '../assets/styles/_colors';
+.upload__btn{
+    background: #000;
+    border:none;
+    color: #fff;
+    padding: 1rem 3rem;
+    border-radius: 3px;
+    font-size: .8rem;
+}
 .dashboard{
     width: 100vw;
     .dashboard__wrapper{
@@ -216,92 +229,11 @@ export default {
                color: #fff;
           }
        }
-        .summary__wrapper{
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            grid-gap: 30px;
-            margin-top: 1rem;
-            .summary__card{
-                display: flex;
-                padding: .5rem 2rem;
-                border-radius: 4px;
-                // font-size: .9rem;
-                color:#fff !important;
-                margin-bottom: 2rem;
-                p{
-                    color:#fff !important;
-                    padding-top: 0rem;
-                    opacity: .9;
-                    font-size: .7rem;
-                    line-height: 1.4rem;
-
-                }
-                h5{
-                    color:#fff;
-                    font-size: 1rem;
-                }
-            }
-            .one{
-                    background: #00C292;
-                }
-                .two{
-                    background: #757afc;
-                }
-                .three{
-                    background: #EF5350;
-                }
-                .four{
-                    background: #251F68;
-                   
-                }
-                
-        }
         .note{
             color: #627081 !important;
             font-size: .8rem;
             line-height: 1.7;
         }
-            //REQUEST FORM
-            form{
-                 box-shadow: 0px 6px 60px -7px rgba(69,77,89,0.15);
-                 padding: 2rem;
-                 margin: 2rem 0;
-                 h4{
-                     font-weight: bold;
-                     font-size: 1rem;
-                     color:#454545;
-                 }
-                 small{
-                     color:#545454;
-                     font-weight: bold;
-                     opacity: .7;
-                     font-size: .8rem;
-                 }
-                 label{
-                     font-size: .8rem;
-                     font-weight: bold;
-                     color:#545454;
-                     opacity: .7;
-                 }
-                 input, select{
-                     height: 2.8rem;
-                     box-shadow: none;
-                     border-radius: 0px;
-                     font-size: .9rem;
-                 }
-                 .request__btn{
-                     background: $secondary-color;
-                     color:#fff;
-                     margin-top: 1.5rem;
-                     border-radius: 3px;
-                     padding: 1rem 3rem;
-                     border: none;
-                     font-size: .9rem;
-                 }
-                 .alert{
-                     font-size: .9rem;
-                 }
-            }
         .invest__img{
             max-height: 50vh;
             width: 100vw;

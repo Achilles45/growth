@@ -3,7 +3,7 @@
       <div class="container">
         <div class="row">
             <div class="col-md-5">
-                 <i class="fa fa-phone"></i>&nbsp;&nbsp; 09045091863&nbsp;  (Mon - Fri, 9am to 4pm)
+                 <i class="fa fa-phone"></i>&nbsp;&nbsp; 07065996814&nbsp;  (Mon - Fri, 9am to 4pm)
             </div>
             <!-- <div class="col-md-3">
                  <i class="fa fa-envelope"></i>&nbsp;&nbsp; uratrainingfx@gmail.com
