@@ -26,7 +26,7 @@
                         <div class="icon__wrapper">
                             <p><i class="fa fa-phone"></i></p>
                         </div>
-                        <p class="pl-3">07065996814</p>
+                        <p class="pl-3">09035123396</p>
                     </div>
                   </div>
                    <div class="col-md-4">
