@@ -6,8 +6,8 @@
           <div class="carousel-overlay"></div>
           <img class="carousel-img" src="../assets/images/hero2.jpeg" alt="First slide" />
           <div class="carousel-caption">
-            <h1 class="animated bounceIn">EARN 50% PROFIT ON YOUR INVESTMENT IN 3 DAYS</h1>
-            <p>Make registration with Growth Investment and enjoy 50% profit in 3 working days</p>
+            <h1 class="animated bounceIn">EARN 30% PROFIT ON YOUR INVESTMENT IN 3 DAYS</h1>
+            <p>Make registration with Growth Investment and enjoy 30% profit in 3 working days</p>
             <router-link to="/signup" class="carousel-btn animated zoomIn animate3d">START NOW</router-link>
           </div>
         </div>

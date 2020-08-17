@@ -7,7 +7,7 @@
               <hr>
               <h2>About Growth Investment Company</h2>
               <hr>
-              <p>Growth investment is for sustainability and logevity because we know how best to trade with your money. We are not here just for few days like others who come promising heaven and vanish out in no time. Those who are sincere and real will see the good intentions behind the policy module. Take it one at a time, to prolong enjoyment as is the best option than eating  one day in short time.
+              <p>Growth Investment is founded by a professional group of skilful financial analysts as well as elite venture capital investors. The company is dedicated to provide stable and secure financial solutions to our esteemed customers to build finiancial success. Our investment plans and products combined with our outstanding security features and reputation for stability ensure you have the best options. Our vision is to provide quality financial services for customers while driving value for our investors.
               Growth investment is real and sincere and we shall surely deliver good result.</p>
           </div>
           <div class="col-md-2"></div>
