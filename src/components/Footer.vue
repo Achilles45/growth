@@ -14,7 +14,7 @@
                  <h6>Email Address</h6>
                 <p>growthinvestment@gmail.com</p>
                  <h6>Phone</h6>
-                <p><a href="tel:08134567183">08134567183</a></p>
+                <p><a href="tel:08141964576">08141964576</a></p>
               </div>
               <div class="col-md-4">
                   <h5>Payment Method</h5>
